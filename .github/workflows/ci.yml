@@ -26,3 +26,9 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: Publish Package
+      uses: alirezanet/publish-nuget@v3.1.0
+      with:
+        PACKAGE_NAME: CodeAnalyzerDemo
+        PROJECT_FILE_PATH: src/Package/Package.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
