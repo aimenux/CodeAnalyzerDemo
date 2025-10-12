@@ -2,6 +2,7 @@
   <Folder Name="/files/">
     <File Path=".gitignore" />
     <File Path="README.md" />
+    <File Path=".github\workflows\ci.yml" />
   </Folder>
   <Folder Name="/src/">
     <Project Path="src/Analyzers/Analyzers.csproj" />
