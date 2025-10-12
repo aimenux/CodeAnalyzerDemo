@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>CodeAnalyzerDemo</PackageId>
+        <PackageVersion>1.0.0</PackageVersion>
+        <Authors>aimenux</Authors>
+        <PackageProjectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</PackageProjectUrl>
+        <PackageIconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</PackageIconUrl>
+        <RepositoryUrl>http://REPOSITORY_URL_HERE_OR_DELETE_THIS_LINE</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <Description>Roslyn analyzer that enforces braces on single statement blocks</Description>
+        <PackageReleaseNotes>Summary of changes made in this release of the package.</PackageReleaseNotes>
+        <Copyright>Copyright</Copyright>
+        <PackageTags>roslyn;analyzer;code-fix;csharp;braces</PackageTags>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <NoPackageAnalysis>true</NoPackageAnalysis>
+        <DevelopmentDependency>true</DevelopmentDependency>
+        <EnablePackageValidation>true</EnablePackageValidation>
+        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+        <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="tools\*.ps1" CopyToOutputDirectory="PreserveNewest" Pack="true" PackagePath=""/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Analyzers\Analyzers.csproj"/>
+        <ProjectReference Include="..\CodeFixes\CodeFixes.csproj"/>
+    </ItemGroup>
+
+    <Target Name="_AddAnalyzersToOutput">
+        <ItemGroup>
+            <TfmSpecificPackageFile Include="$(OutputPath)\Analyzers.dll" PackagePath="analyzers/dotnet/cs"/>
+            <TfmSpecificPackageFile Include="$(OutputPath)\CodeFixes.dll" PackagePath="analyzers/dotnet/cs"/>
+        </ItemGroup>
+    </Target>
+
+</Project>
