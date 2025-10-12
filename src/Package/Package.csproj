@@ -2,12 +2,11 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <PropertyGroup>
         <PackageId>CodeAnalyzerDemo</PackageId>
-        <PackageVersion>1.0.0</PackageVersion>
+        <Version>0.0.1</Version>
         <Authors>aimenux</Authors>
         <PackageProjectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</PackageProjectUrl>
         <PackageIconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</PackageIconUrl>
@@ -18,9 +17,10 @@
         <PackageReleaseNotes>Summary of changes made in this release of the package.</PackageReleaseNotes>
         <Copyright>Copyright</Copyright>
         <PackageTags>roslyn;analyzer;code-fix;csharp;braces</PackageTags>
-        <IncludeBuildOutput>false</IncludeBuildOutput>
         <NoPackageAnalysis>true</NoPackageAnalysis>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
         <DevelopmentDependency>true</DevelopmentDependency>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <EnablePackageValidation>true</EnablePackageValidation>
         <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
         <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzersToOutput</TargetsForTfmSpecificContentInPackage>
