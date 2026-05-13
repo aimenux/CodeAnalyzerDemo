@@ -6,7 +6,7 @@
 
     <PropertyGroup>
         <PackageId>CodeAnalyzerDemo</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.0.2</Version>
         <Authors>aimenux</Authors>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageProjectUrl>https://github.com/aimenux/CodeAnalyzerDemo</PackageProjectUrl>
