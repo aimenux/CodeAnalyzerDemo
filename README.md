@@ -1,4 +1,6 @@
 [![.NET](https://github.com/aimenux/UnifiedApiResponseDemo/actions/workflows/ci.yml/badge.svg)](https://github.com/aimenux/UnifiedApiResponseDemo/actions/workflows/ci.yml)
+[![NuGet](https://img.shields.io/nuget/v/CodeAnalyzerDemo)](https://www.nuget.org/packages/CodeAnalyzerDemo/)
+
 # CodeAnalyzerDemo
 ```
 Using roslyn analyzers for code analysis and automatic fixes
