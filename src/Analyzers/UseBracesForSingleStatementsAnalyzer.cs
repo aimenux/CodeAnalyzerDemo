@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
+﻿using System.Collections.Immutable;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -20,7 +17,7 @@ namespace Analyzers
         private const bool IsEnabledByDefault = true;
         private const string Category = "Style";
 
-        private static readonly DiagnosticDescriptor Rule = new DiagnosticDescriptor(
+        private static readonly DiagnosticDescriptor Rule = new(
             DiagnosticId,
             Title,
             MessageFormat,
@@ -29,7 +26,7 @@ namespace Analyzers
             IsEnabledByDefault,
             Description);
         
-        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => ImmutableArray.Create(Rule);
+        public override ImmutableArray<DiagnosticDescriptor> SupportedDiagnostics => [Rule];
 
         private static readonly ImmutableDictionary<SyntaxKind, Func<SyntaxNode, StatementSyntax>> Extractors =
             new Dictionary<SyntaxKind, Func<SyntaxNode, StatementSyntax>>

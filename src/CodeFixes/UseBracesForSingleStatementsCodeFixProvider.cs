@@ -1,7 +1,5 @@
 ﻿using System.Collections.Immutable;
 using System.Composition;
-using System.Linq;
-using System.Threading.Tasks;
 using Analyzers;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CodeActions;
@@ -16,8 +14,7 @@ namespace CodeFixes
     {
         private const string Title = "Add braces for single statement block";
         
-        public override ImmutableArray<string> FixableDiagnosticIds =>
-            ImmutableArray.Create(UseBracesForSingleStatementsAnalyzer.DiagnosticId);
+        public override ImmutableArray<string> FixableDiagnosticIds => [UseBracesForSingleStatementsAnalyzer.DiagnosticId];
         
         public override FixAllProvider GetFixAllProvider() => WellKnownFixAllProviders.BatchFixer;
         

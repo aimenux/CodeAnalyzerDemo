@@ -18,4 +18,4 @@ Using roslyn analyzers for code analysis and automatic fixes
 > - `lock` statements
 >
 >
-**`Tools`** : net standard 2.0, net 9.0
+**`Tools`** : net standard 2.0, net 10.0
